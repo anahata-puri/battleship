@@ -1,0 +1,17 @@
+import pygame
+
+pygame.init()
+window = pygame.display.set_mode((600,400))
+clock = pygame.time.Clock()
+run = True
+
+while run:
+    pygame.display.update()
+    clock.tick(40)
+    event_list = pygame.event.get()
+        
+    window.fill((125,125,125)) # Fill window
+
+    for event in event_list:
+        if event.type == pygame.QUIT:
+            run = False
